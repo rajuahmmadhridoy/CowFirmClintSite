@@ -1,0 +1,763 @@
+/* CSS Index 
+-----------------------------------
+1. Theme default css
+2. header
+3. banner-area
+4.counterArea
+5.clintsArea
+6. servicesArea
+7.projectArea
+8.testimonialsArea
+9.faqArea
+10. videoArea 
+*/
+
+/* 1. Theme default css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+body {
+  font-family: Roboto;
+  font-weight: normal;
+  font-style: normal;
+}
+// colors
+$white: #ffffff;
+$lightGreen: #5b8c51;
+$darkGreen: #31512a;
+$orange: #fdd062;
+$gray: #777777;
+$simiLightGray: #c1cbbe;
+$lightGray: #b9c8b5;
+.img {
+  max-width: 100%;
+  transition: all 0.3s ease-out 0s;
+}
+.f-left {
+  float: left;
+}
+.f-right {
+  float: right;
+}
+.fix {
+  overflow: hidden;
+}
+a,
+.button {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+a:focus,
+.button:focus {
+  text-decoration: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+a:focus,
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+  color: #2b96cc;
+  text-decoration: none;
+}
+a,
+button {
+  color: #1696e7;
+  outline: medium none;
+}
+button:focus {
+  outline: 0 none;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Lato;
+  font-weight: normal;
+  color: $darkGreen;
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+h2 {
+  font-size: 35px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 22px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 16px;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+}
+p {
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 30px;
+  color: $gray;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background: $darkGreen;
+  width: 200px;
+  height: 60px;
+  border: none;
+  color: $white;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 15px;
+  &:hover {
+    color: $white;
+  }
+}
+
+.title {
+  h2 {
+    color: $darkGreen;
+    font-size: 50px;
+    margin-bottom: 25px;
+    padding-right: 60px;
+  }
+  p {
+    color: $lightGreen;
+  }
+}
+
+// header
+.headerTop {
+  height: 40px;
+  background-color: $lightGreen;
+  .headerTopLeft {
+    p {
+      font-size: 14px;
+      color: $white;
+      i {
+        margin-right: 5px;
+      }
+      &:last-child {
+        margin-left: 15px;
+      }
+    }
+  }
+  .headerTopRight {
+    .socialIcons {
+      ul {
+        li {
+          float: left;
+          a {
+            color: $white;
+            padding: 0 13px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// header-bottom
+.headerBottom {
+  height: 100px;
+  background-color: $darkGreen;
+  .headerBottomInner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    .logo {
+      grid-column: 1 / 3;
+    }
+    .menu {
+      grid-column: 3 / 11;
+      justify-self: end;
+      ul {
+        li {
+          float: left;
+          a {
+            color: $white;
+            padding: 40px 15px;
+          }
+        }
+      }
+    }
+    .headerBotomRight {
+      grid-column: 11 / 13;
+      justify-self: end;
+      .serch {
+        p {
+          color: $white;
+          margin-right: 20px;
+          transition: 5s;
+          &:hover > input {
+            display: block;
+          }
+        }
+        &:hover {
+          input {
+            display: block;
+          }
+          p {
+            display: none;
+          }
+        }
+        input {
+          width: 180px;
+          height: 35px;
+          margin-right: 10px;
+          display: none;
+          outline: none;
+          border: none;
+          padding: 5px 20px;
+          border-radius: 5px;
+        }
+      }
+      p {
+        color: $white;
+      }
+    }
+  }
+}
+
+// banner-area
+.bannerArea {
+  background-image: url(../img/bg/headerBg.png);
+  width: 100%;
+  background-size: cover;
+  height: 700px;
+  .bannerInner {
+    position: relative;
+    .bannerContent {
+      position: absolute;
+      top: 40px;
+      text-align: center;
+      .logo {
+        margin-bottom: 25px;
+      }
+
+      p {
+        color: $white;
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 80px;
+        color: $white;
+      }
+    }
+  }
+}
+
+// aboutArea
+
+.about {
+  .aboutInner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 120px;
+    grid-auto-rows: auto;
+    .aboutImg {
+      position: relative;
+      margin-left: 63px;
+      .aboutImgTop {
+        position: absolute;
+        top: -87px;
+        left: -129px;
+      }
+    }
+    .aboutContent {
+      img {
+        margin-bottom: 20px;
+      }
+
+      .aboutContentLeft {
+        img {
+          height: 45px;
+          margin-right: 10px;
+        }
+      }
+      .aboutContentRight {
+        img {
+          height: 45px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+// counterArea
+.counterArea {
+  background-image: url(../img/counter/counterBg.png);
+  background-size: cover;
+  height: 470px;
+  width: 100%;
+
+  .counterInner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-template-rows: 300px;
+    grid-auto-rows: 300px;
+    justify-items: center;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    .counterItem {
+      background-color: $white;
+      width: 100%;
+      margin-top: -67px;
+      text-align: center;
+      box-shadow: 1px 1px 10px $lightGray;
+      .counterItemImg {
+        margin-top: 50px;
+        margin-bottom: 80px;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          height: 50px;
+          width: 5px;
+          background: $orange;
+          top: 79px;
+          left: 50%;
+          right: 50%;
+        }
+      }
+      h2 {
+        color: $darkGreen;
+      }
+    }
+  }
+}
+
+// clintsArea
+.clintsArea {
+  .clintsInner {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 150px;
+    grid-auto-rows: 150px;
+    grid-gap: 100px;
+    border-bottom: 1px solid $gray;
+    div {
+      text-align: center;
+      transition: 1s;
+      p {
+        display: none;
+        color: $lightGreen;
+      }
+      &:hover p {
+        display: block;
+      }
+      &:hover a img {
+        filter: opacity(1.5) drop-shadow(0 0 0 green);
+      }
+    }
+  }
+}
+// servicesArea
+.servicesArea {
+  position: relative;
+  &.servicesArea:after {
+    content: "";
+    position: absolute;
+    background: $darkGreen;
+    height: 455px;
+    width: 100%;
+    bottom: -70px;
+  }
+  .servicesInner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 450px;
+    grid-gap: 25px;
+    .servicesItem {
+      background: $white;
+      position: relative;
+      z-index: 10;
+      width: 300px;
+
+      .serviceItemImg {
+        width: 300px;
+        height: 300px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        .icon {
+          width: 70px;
+          height: 70px;
+          background: $orange;
+          position: absolute;
+          top: 230px;
+          right: 24px;
+          text-align: center;
+          img {
+            width: 70%;
+            height: 70%;
+            margin-top: 12px;
+          }
+        }
+      }
+      .servicesItemContent {
+        padding: 20px;
+      }
+    }
+  }
+  .servicesInnerContactInfo {
+    position: relative;
+    z-index: 100;
+    margin-top: 110px;
+    div {
+      p {
+        color: $white;
+      }
+      h2 {
+        color: $white;
+        font-size: 60px;
+      }
+    }
+    color: $white;
+  }
+}
+
+// projectArea
+.projectArea {
+  .projectAreaMain {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: 500px;
+    .projectAreaInnner {
+      transition: 1s;
+      position: relative;
+      .projectAreaContent {
+        transition: 1s;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        margin-bottom: 40px;
+        justify-content: center;
+        p {
+          color: $white;
+        }
+        h3 {
+          color: $white;
+        }
+        a {
+          color: $orange;
+        }
+      }
+      .projectAreaHoverContent {
+        justify-content: center;
+        -webkit-transition: 1s;
+        transition: 1s;
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 40px;
+        padding: 0 40px;
+        p {
+          color: $white;
+          &:first-child {
+            margin-bottom: 35px;
+          }
+        }
+        h3 {
+          color: $white;
+          font-size: 24px;
+          margin-bottom: 18px;
+        }
+      }
+      &:hover {
+        .projectAreaContent {
+          display: none;
+        }
+        .projectAreaHoverContent {
+          display: block;
+          a {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+// testimonialsArea
+.testimonials {
+  background: #f7f7f7;
+  height: 650px;
+  .testimonialItemContent {
+    .testimonialItemImg {
+      margin-right: 20px;
+    }
+    p {
+      padding-right: 250px;
+      font-size: 20px;
+      color: $darkGreen;
+    }
+  }
+
+  .testimonialPaginate {
+    display: grid;
+    justify-content: center;
+    border-top: 1px solid $gray;
+    padding-top: 30px;
+    margin-top: 60px;
+    .testimonialPaginateItem {
+      margin-right: 30px;
+    }
+    .paginateActive {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        background: $lightGreen;
+        height: 3px;
+        width: 100%;
+        top: -32px;
+      }
+    }
+  }
+}
+
+// faqArea
+.faqArea {
+  .faqInner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 300px;
+    grid-auto-rows: 300px;
+    align-items: center;
+    .faqContent {
+      grid-column: auto / span 2;
+      padding-left: 80px;
+      .accordion-button {
+        color: $darkGreen;
+        font-size: 18px;
+        &::after {
+          font-family: FontAwesome;
+          content: "\f067";
+          background-image: none;
+        }
+      }
+    }
+  }
+}
+
+// videoArea
+.videoArea {
+  background-image: url(../img/video/bg.png);
+  height: 700px;
+  width: 100%;
+}
+
+// blogArea
+.blogArea {
+  .blogInner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: 380px;
+    grid-gap: 25px;
+    .blogItem {
+      background: $white;
+      position: relative;
+      z-index: 10;
+      width: 400px;
+      box-shadow: 2px 2px 10px $lightGray;
+
+      .blogItemImg {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        .icon {
+          width: 120px;
+          height: 30px;
+          background: $orange;
+          position: absolute;
+          top: 176px;
+          right: 24px;
+          text-align: center;
+          img {
+            width: 70%;
+            height: 70%;
+            margin-top: 12px;
+          }
+        }
+      }
+      .blogItemContent {
+        padding: 20px;
+        p {
+          color: $lightGreen;
+        }
+        h3 {
+          color: $darkGreen;
+          font-size: 20px;
+        }
+        div {
+          a {
+            color: $lightGray;
+          }
+          i {
+            color: $lightGray;
+          }
+        }
+      }
+    }
+  }
+}
+
+// footerArea
+.footerArea {
+  background: $darkGreen;
+  .footerTitle {
+    color: $white;
+    font-size: 20px;
+  }
+  .footerInner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 330px;
+    grid-gap: 25px;
+    .footerAbout {
+      grid-column: auto / span 2;
+      p {
+        color: $lightGray;
+      }
+      .socialIcons {
+        h4 {
+          color: $lightGray;
+          margin-bottom: 20px;
+        }
+        ul {
+          li {
+            float: left;
+            margin-right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid $lightGray;
+            line-height: 50px;
+            text-align: center;
+            a {
+              color: $gray;
+            }
+          }
+        }
+      }
+    }
+    .footerSrvice {
+      ul {
+        li {
+          margin: 10px 0;
+          a {
+            color: $lightGray;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+    .footerPages {
+      ul {
+        li {
+          margin: 10px 0;
+          a {
+            color: $lightGray;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+    .footerSubscribe {
+      input {
+        width: 100%;
+        height: 60px;
+        padding: 0 10px;
+        outline: none;
+        margin-bottom: 15px;
+      }
+      button {
+        background: $orange;
+        width: 100%;
+        height: 50px;
+        border: none;
+        color: $white;
+      }
+    }
+  }
+  .footerBottom {
+    background: $orange;
+    .footerBottomInner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-rows: 60px;
+      grid-gap: 25px;
+      align-items: center;
+      .logo {
+        width: 150px;
+        text-align: center;
+        img {
+          width: 100%;
+        }
+      }
+      div {
+        p {
+          color: $lightGreen;
+          margin-bottom: 0;
+          span {
+            color: $darkGreen;
+          }
+        }
+        ul {
+          li {
+            float: left;
+            margin-right: 20px;
+            a {
+              color: $darkGreen;
+            }
+          }
+        }
+      }
+    }
+  }
+}
