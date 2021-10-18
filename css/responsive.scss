@@ -1,12 +1,141 @@
 // responsive
 
-@media screen and (min-width: 1023px) and (max-width: 1400px) {
+@media (min-width: 1200px) and (max-width: 1500px) {
   .container {
     min-width: 1300px;
   }
 }
-@media screen and(max-width: 1024px) {
+/* LG Device :992px. */
+@media (max-width: 1200px) {
+  .container {
+    min-width: 1000px;
+  }
+  .title {
+    h2 {
+      font-size: 40px;
+    }
+  }
+
+  // aboutArea
+
+  .about {
+    .aboutInner {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 50px;
+      .aboutLeft {
+        .aboutImg {
+          // width: 400px;
+        }
+      }
+    }
+  }
+
+  // counterArea
+
+  .counterArea {
+    .counterInner {
+      // grid-row-gap: 90px;
+    }
+  }
+
+  // clintArea
+
+  .clintsArea {
+    margin-top: 280px;
+    .clintsInner {
+      grid-gap: 70px;
+    }
+  }
+
+  // serviceArea
+  .servicesArea {
+    .servicesInner {
+      .servicesItem {
+        .serviceItemImg {
+          .icon {
+            top: 167px;
+          }
+        }
+      }
+    }
+    .servicesInnerContactInfo {
+      margin-top: 48px;
+    }
+  }
+
+  // ProjectArea
+  .projectArea {
+    .projectAreaMain {
+      // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+
+  // faqArea
+
+  .faqArea {
+    .faqInner {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-gap: 20px;
+      div {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // blogArea
+  .blogArea {
+    .blogInner {
+      // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      .blogItem {
+        .blogItemImg {
+          .icon {
+            top: 136px;
+          }
+        }
+      }
+    }
+  }
+
+  // footerArea
+  .footerArea {
+    .footerInner {
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+  }
+}
+
+/* MD Device :768px. */
+@media (max-width: 768px) {
   .container {
     min-width: 100%;
+  }
+
+  .headerBottom {
+    .headerBottomInner {
+      .menu {
+        grid-column: 3 / 12;
+        ul {
+          li {
+            a {
+              padding: 20px 10px;
+            }
+          }
+        }
+      }
+      .headerBotomRight {
+        grid-column: 12 / 13;
+      }
+    }
+  }
+
+  .footerArea {
+    .footerInner {
+    grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
+      .footerAbout {
+        grid-column: unset;
+      }
+    }
   }
 }

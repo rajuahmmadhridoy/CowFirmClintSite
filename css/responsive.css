@@ -1,12 +1,75 @@
-@media screen and (min-width: 1023px) and (max-width: 1400px) {
+@media (min-width: 1200px) and (max-width: 1500px) {
   .container {
     min-width: 1300px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+/* LG Device :992px. */
+@media (max-width: 1200px) {
+  .container {
+    min-width: 1000px;
+  }
+  .title h2 {
+    font-size: 40px;
+  }
+  .about .aboutInner {
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 50px;
+  }
+  .clintsArea {
+    margin-top: 280px;
+  }
+  .clintsArea .clintsInner {
+    grid-gap: 70px;
+  }
+  .servicesArea .servicesInner .servicesItem .serviceItemImg .icon {
+    top: 167px;
+  }
+  .servicesArea .servicesInnerContactInfo {
+    margin-top: 48px;
+  }
+  .faqArea .faqInner {
+    -ms-grid-columns: (minmax(120px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 20px;
+  }
+  .faqArea .faqInner div img {
+    width: 100%;
+  }
+  .blogArea .blogInner .blogItem .blogItemImg .icon {
+    top: 136px;
+  }
+  .footerArea .footerInner {
+    -ms-grid-columns: (minmax(170px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+}
+
+/* MD Device :768px. */
+@media (max-width: 768px) {
   .container {
     min-width: 100%;
+  }
+  .headerBottom .headerBottomInner .menu {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 9;
+    grid-column: 3 / 12;
+  }
+  .headerBottom .headerBottomInner .menu ul li a {
+    padding: 20px 10px;
+  }
+  .headerBottom .headerBottomInner .headerBotomRight {
+    -ms-grid-column: 12;
+    -ms-grid-column-span: 1;
+    grid-column: 12 / 13;
+  }
+  .footerArea .footerInner {
+    -ms-grid-columns: (minmax(247px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
+  }
+  .footerArea .footerInner .footerAbout {
+    grid-column: unset;
   }
 }
 /*# sourceMappingURL=responsive.css.map */
